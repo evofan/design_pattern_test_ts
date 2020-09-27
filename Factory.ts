@@ -1,0 +1,14 @@
+import { Product } from "./product";
+
+export abstract class Factory {
+  create(owner: string): Product {
+    const p: Product = this.createProduct(owner);
+    console.log(p);
+    this.registerProduct(p);
+
+    return p;
+  }
+
+  protected abstract createProduct(owner: string): Product;
+  protected abstract registerProduct(product: Product): void;
+}

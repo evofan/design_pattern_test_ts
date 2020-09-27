@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var idCardFactory_1 = require("./idCardFactory");
+var factory = new idCardFactory_1.IdCardFactory();
+var card1 = factory.create("やまだ");
+var card2 = factory.create("すずき");
+var card3 = factory.create("さとう");
+card1.use();
+card2.use();
+card3.use();
